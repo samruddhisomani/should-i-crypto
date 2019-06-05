@@ -1,13 +1,20 @@
-.chart {
-  display: flex;
-  justify-content: center;
-  max-width: 50vw;
-  max-height: 50vh;
-  margin: auto;
+html,
+body {
+    height: 100%;
+    width: 100%
 }
 
-.line {
-  fill: none;
-  stroke: #ffab00;
-  stroke-width: 3;
+.chart {
+    width: 75vw;
+    height: 50vh;
+    max-width: 900px;
+    max-height: 600px;
+    margin: auto;
+}
+
+
+
+.chartwrapper {
+    display: flex;
+    justify-content: center;
 }
