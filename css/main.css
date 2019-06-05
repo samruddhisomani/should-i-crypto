@@ -5,3 +5,9 @@
   max-height: 50vh;
   margin: auto;
 }
+
+.line {
+  fill: none;
+  stroke: #ffab00;
+  stroke-width: 3;
+}
