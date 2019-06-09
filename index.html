@@ -11,7 +11,39 @@
     <title>Document</title>
   </head>
   <body>
-    <div class='chartwrapper'> <div class="chart"></div></div>
+    <header><h1 class='header__title'>Should I Crypto?</h1></header>
+    <form id='inputform' name="inputform" class='form'
+      onsubmit="event.preventDefault();
+      formSubmit()">
+      <div class='form__element'>
+        <label for='cryptoselect'>Cryptocurrency:</label>
+        <select id='cryptoselect' form='inputform' required>
+          <option selected value="">Select crypto</option>
+          <option value="BTC">BTC</option>
+          <option value="ETH">ETH</option>
+          <option value="XRP">XRP</option>
+          <option value="LTC">LTC</option>
+          <option value="EOS">EOS</option>
+        </select>
+      </div>
+      <div class='form__element'>
+        <label for='fiatselect'>Base Fiat:</label>
+        <select id='fiatselect' form='inputform' required>
+          <option selected value="">Select fiat</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="JPY">JPY</option>
+          <option value="CNY">CNY</option>
+        </select>
+      </div>
+      <div class='form__element'>
+        <button class='form__button' type="submit" value="Submit">Submit</button>
+      </div>
+      <div class='form__element'>
+        <button class='form__button' type="reset" value="Reset">Reset</button>
+      </div>
+    </form>
+    <div class='chart__wrapper'> <div class="chart"></div></div>
     <script src="js/index.js"></script>
   </body>
 </html>
