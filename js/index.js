@@ -40,48 +40,24 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(cryptoParsed);
     console.log(fiatParsed);
 
-    var graph = new Rickshaw.Graph({
-      element: document.querySelector('#graph'),
-      series: [
-        {
-          color: 'red',
+    let graph = document.querySelector('#lineGraph');
+    var chart = new Chart(graph, {
+      type: 'line',
+      data: {
+        datasets: [{
+          label: 'Crypto',
+          borderColor: 'rgb(255, 99, 132)',
           data: cryptoParsed
         }, {
-          color: 'blue',
+          label: 'Fiat',
+          borderColor: 'rgb(54, 162, 235)',
           data: fiatParsed
         }
-      ]
-    });
-    graph.render();
+        ]
+      },
+      options: {
+        responsive: true
+      }
+    })
   })
 })
-
-let VIEW;
-
-const formSubmit = () => {
-  fetch("chart.vl.json", { mode: "cors" })
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (spec) {
-      vegaEmbed(".chart", spec)
-        .then(function (result) {
-          // result.view is the Vega View, vlSpec is the original Vega-Lite specification
-          VIEW = result.view;
-          const x = document.querySelector(".chart");
-          VIEW.width(x.clientWidth)
-            .height(x.clientHeight)
-            .run();
-        })
-        .catch(console.error);
-    });
-};
-
-// resize code from
-// view-source:https://streeteasy-market-data-api.s3.amazonaws.com/vis/v3.1/js/main.js
-window.addEventListener("resize", () => {
-  const x = document.querySelector(".chart");
-  VIEW.width(x.clientWidth)
-    .height(x.clientHeight)
-    .run();
-});

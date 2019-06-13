@@ -6,14 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Should I Crypto?</title>
   <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="https://unpkg.com/rickshaw@1.6.6/rickshaw.min.css" />
-  <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/moment@2.24.0/min/moment.min.js"></script>
-  <script src="https://unpkg.com/rickshaw@1.6.6/rickshaw.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@4.2.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.4.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.3.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
 </head>
 
 <body>
@@ -52,7 +47,7 @@
     </div>
   </form>
   <div class='chart__wrapper'>
-    <div class="chart" id="graph"></div>
+    <canvas class="chart" id="lineGraph"></canvas>
   </div>
   <script src="js/index.js"></script>
 </body>
