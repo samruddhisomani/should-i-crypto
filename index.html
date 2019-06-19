@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Should I Crypto?</title>
+  <meta name="description" content="An exploration of cryptocurrency exchange rates versus fiat currencies" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="navbar navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Should I Crypto?</a>
+      <a class="navbar-nav ml-auto" href="https://github.com/samruddhisomani/should-i-crypto">
+        <i class="fa fa-2x fa-github text-light"></i>
+      </a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h1 class='text-center my-5'>Should I Crypto?</h1>
+    <div class="d-flex justify-content-center">
+      <form class="d-flex" id="inputForm">
+        <select required class="custom-select w-auto mx-2" id="cryptoSelect">
+          <option value="" selected>Cryptocurrency</option>
+          <option value="bitcoin">BTC</option>
+          <option value="ethereum">ETH</option>
+          <option value="ripple">XRP</option>
+          <option value="litecoin">LTC</option>
+          <option value="eos">EOS</option>
+        </select>
+        <select required class="custom-select w-auto mx-2" id="fiatSelect">
+          <option value="" selected>Base Fiat</option>
+          <option value="USD">USD</option>
+          <option value="GBP">GBP</option>
+          <option value="JPY">JPY</option>
+          <option value="CNY">CNY</option>
+        </select>
+        <button type="submit" class="btn btn-outline-primary mx-2" id="submitButton">Submit</button>
+      </form>
+    </div>
+    <div class="d-flex justify-content-center">
+      <canvas id="lineGraph">
+    </div>
+  </main>
+
+  <footer class="footer fixed-bottom text-center bg-primary">
+    <span class="text-light">
+      © 2019 Samruddhi Somani & Patrick Hardin
+    </span>
+  </footer>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/moment@2.24.0/min/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+  <script src="index.js"></script>
+
+</body>
+
+</html>
